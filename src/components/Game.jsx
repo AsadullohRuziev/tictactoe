@@ -24,7 +24,7 @@ export default class Game extends Component {
     if (winner || squares[i]) {
       return;
     }
-    squares[i] = this.state.xIsNext ? " X" : " O";
+    squares[i] = this.state.xIsNext ? " 💓" : " 💲";
     this.setState({
       history: history.concat({
         squares: squares,
@@ -51,7 +51,7 @@ export default class Game extends Component {
     if (winner) {
       status = "Winner is  " + winner;
     } else {
-      status = "Next plaryer is" + (this.state.xIsNext ? " X" : " O");
+      status = "Next plaryer is" + (this.state.xIsNext ? " 💓" : " 💲");
     }
     return (
       <div className="game">
